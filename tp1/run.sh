@@ -1,2 +1,3 @@
 #ansible [pattern] -m [ansible.builtin.ping] -a "[module options]"
-ansible all -m ansible.builtin.ping -a ping 
+export $ANSIBLE_CONFIG=/home/vagrant/training_ansible/tp1/.ansible.cfg
+ansible all -a ping 

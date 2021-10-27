@@ -1,5 +1,5 @@
 #ansible [pattern] -m [ansible.builtin.ping] -a "[module options]"
-export ANSIBLE_CONFIG=/home/vagrant/training_ansible/tp1/.ansible.cfg
+export ANSIBLE_CONFIG=/home/vagrant/training_ansible/tp2/.ansible.cfg
 ansible client1 -m ping 
 ansible client1 -m file -a 'path=toto.txt state=touch'
 if [ ! grep -q "client2" /home/vagrant/training_ansible/tp1/hosts ]; then

@@ -6,3 +6,5 @@ if [ ! grep -q "client2" /home/vagrant/training_ansible/tp1/hosts ]; then
 echo "client2 ansible_host=192.168.99.12 ansible_user=vagrant ansible_password=vagrant ansible_ssh_common_args='-o StrictHostKeyChecking=no'" >> /home/vagrant/training_ansible/tp1/hosts
 fi
 ansible all -m ping 
+ansible all -m setup
+ansible all -m setup -a 'filter=ansible_memtotal_mb' 

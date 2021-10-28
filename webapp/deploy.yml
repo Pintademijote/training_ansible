@@ -1,4 +1,4 @@
-gather_facts: true
+- gather_facts: true
 - include: nginx.yml
   when: ansible_os_family == "CentOS"
 - include: webapp.yml

@@ -1,5 +1,14 @@
-- gather_facts: true
-- include: nginx.yml
-  when: ansible_os_family == "CentOS"
-- include: webapp.yml
-  when: ansible_os_family == "CentOS"
+- name: install all
+  hosts: prod
+  become: true
+  become_user: root
+  gather_facts: true
+
+  tasks:
+  - name: Include task list in play
+    import_tasks: nginx.yml
+    when: ansible_os_family == "CentOS"
+
+  - name: Include task list in play
+    import_tasks: webapp.yml
+    when: ansible_os_family == "CentOS"

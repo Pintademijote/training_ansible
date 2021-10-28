@@ -5,6 +5,12 @@
   become_user: root
 
   tasks:
+
+  - name: Touch again the same file, but do not change times this makes the task idempotent
+    ansible.builtin.file:
+      path: /usr/share/nginx/html/index.html
+      state: touch
+
   - name: Hello World
     ansible.builtin.lineinfile:
       path: /usr/share/nginx/html/index.html

@@ -1,0 +1,21 @@
+  - name: install
+    hosts: prod
+    become_user: root
+
+    tasks:
+    - name: Install nginx
+      ansible.builtin.package:
+        name: nginx
+        state: present
+      notify:
+    - install nginx
+  
+    handlers:
+      - name: enable service nginx, if not started
+        ansible.builtin.service:
+          name: nginx
+          enabled : yes
+      - name: Start service nginx, if not started
+        ansible.builtin.service:
+          name: nginx
+          state: start

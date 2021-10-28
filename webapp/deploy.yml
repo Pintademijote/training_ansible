@@ -1,4 +1,6 @@
 - gather_facts: yes
+  hosts: prod
+  
 - import_playbook: nginx.yml
   when: ansible_distribution == "CentOS"
 

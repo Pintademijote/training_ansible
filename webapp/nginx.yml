@@ -16,9 +16,6 @@
     - name: install nginx
       ansible.builtin.service:
         name: nginx
-        enabled : yes
-    - name: install nginx
-      ansible.builtin.service:
-        name: nginx
+        enabled: yes
         state: start
 ...

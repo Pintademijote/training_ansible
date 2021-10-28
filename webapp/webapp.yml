@@ -10,10 +10,11 @@
       path: /usr/share/nginx/html/index.html
       state: present
       line: "Hello World"
+
   - name: empty dest directory 
     file:
-    state: absent
-    path: /usr/share/nginx/html/
+      state: absent
+      path: /usr/share/nginx/html/
 
   - name: recreate directory 
     file:

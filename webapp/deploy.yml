@@ -1,0 +1,6 @@
+- hosts: instance_1
+  gather_facts: no
+
+  tasks:
+    - include: nginx.yml
+    - include: webapp.yml

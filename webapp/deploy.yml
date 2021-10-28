@@ -1,14 +1,6 @@
-- name: install all
-  hosts: prod
-  become: true
-  become_user: root
-  gather_facts: true
 
-  tasks:
-  - name: Include task list in play
-    import_playbook: nginx.yml
-    when: ansible_os_family == "CentOS"
+- import_playbook: nginx.yml
+  when: ansible_os_family == "CentOS"
 
-  - name: Include task list in play
-    import_playbook: webapp.yml
-    when: ansible_os_family == "CentOS"
+- import_playbook: webapp.yml
+  when: ansible_os _family == "CentOS"

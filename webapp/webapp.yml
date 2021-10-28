@@ -3,9 +3,9 @@
   become: true
   become_user: root
 
-    tasks:
-    - name: Hello World
-      ansible.builtin.lineinfile:
-        path: /usr/share/nginx/html/index.html
-        state: present
-        regexp: "hello world"
+  tasks:
+  - name: Hello World
+    ansible.builtin.lineinfile:
+      path: /usr/share/nginx/html/index.html
+      state: present
+      regexp: "hello world"

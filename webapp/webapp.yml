@@ -31,5 +31,4 @@
     ansible.builtin.git:
       repo: https://github.com/diranetafen/static-website-example.git
       dest: /usr/share/nginx/html/
-      single_branch: yes
       version: master

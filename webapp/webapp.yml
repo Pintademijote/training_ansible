@@ -9,4 +9,4 @@
     ansible.builtin.lineinfile:
       path: /usr/share/nginx/html/index.html
       state: present
-      regexp: "hello world"
+      line: "Hello World"

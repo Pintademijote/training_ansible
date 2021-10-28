@@ -1,5 +1,5 @@
 ---
-- name: install
+- name: install_dependencies
   hosts: prod
   become: true
   become_user: root

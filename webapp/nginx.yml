@@ -1,10 +1,10 @@
 ---
 - name: install
   hosts: prod
-  become_user: root
 
   tasks:
   - name: Install nginx
+    become_user: root
     ansible.builtin.package:
       name: nginx
       state: present

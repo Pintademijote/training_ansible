@@ -1,6 +1,6 @@
 
 - import_playbook: nginx.yml
-  when: (ansible_os_family == "CentOS")
+  when: ansible_distribution == "CentOS"
 
 - import_playbook: webapp.yml
-  when: (ansible_os _family) == "CentOS")
+  when: ansible_distribution == "CentOS"

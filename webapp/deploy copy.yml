@@ -6,9 +6,9 @@
 
   tasks:
   - name: Include task list in play
-    include: nginx.yml
+    import_tasks: nginx.yml
     when: ansible_os_family == "CentOS"
 
   - name: Include task list in play
-    include: webapp.yml
+    import_tasks: webapp.yml
     when: ansible_os_family == "CentOS"

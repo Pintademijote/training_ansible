@@ -1,4 +1,5 @@
-- name: install
+---
+- name: install website
   hosts: prod
   become: true
   become_user: root

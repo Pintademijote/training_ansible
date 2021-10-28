@@ -1,3 +1,4 @@
+---
 - name: install
   hosts: prod
   become_user: root
@@ -8,7 +9,7 @@
       name: nginx
       state: present
     notify:
-  - install nginx
+    - install nginx
 
   handlers:
     - name: enable service nginx, if not started
@@ -19,3 +20,4 @@
       ansible.builtin.service:
         name: nginx
         state: start
+...

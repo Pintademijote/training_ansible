@@ -1,3 +1,5 @@
 
 - include: nginx.yml
+  when: ansible_os_family == "CentOS"
 - include: webapp.yml
+  when: ansible_os_family == "CentOS"

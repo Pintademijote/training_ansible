@@ -16,4 +16,5 @@
           - 80
         ports:
           - 80:80
-        volumes: /home/vagrant/webapp/:/usr/local/apache2/htdocs/
+        volumes: 
+          - /home/vagrant/webapp/:/usr/local/apache2/htdocs/

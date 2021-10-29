@@ -63,6 +63,12 @@
         append: yes
       become: yes
 
+    - name: Install pipython3p utils
+      yum:
+        name: python3
+        state: latest
+      become: yes
+
     - name: Install pip utils
       yum:
         name: python3-pip

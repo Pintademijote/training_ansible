@@ -65,6 +65,7 @@
       yum:
         name: python-pip
         state: latest
+      become: yes
 
     - name: Install Docker Module for Python
       pip:

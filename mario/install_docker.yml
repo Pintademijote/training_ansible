@@ -72,8 +72,3 @@
         name: docker
         executable: pip3
       become: yes
-
-    - name: Install Docker Module for Python
-      pip:
-        name: docker-py
-      become: yes

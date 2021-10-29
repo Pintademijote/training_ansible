@@ -4,9 +4,9 @@
   hosts: prod
 
   tasks:
-  - name: Start mario
-    community.docker.docker_container:
-      name: mario
-      image: pengbai/docker-supermario
-      exposed_ports:
-        - 8080 
+    - name: Start mario
+      community.docker.docker_container:
+        name: mario
+        image: pengbai/docker-supermario
+        exposed_ports:
+          - 8080 

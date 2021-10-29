@@ -37,10 +37,10 @@
       dest: "/usr/share/nginx/html/"
       mode: 0644
     notify:
-    - Restart httpd
+    - Restart nginx
 
   handlers:
-    - name: Restart httpd
+    - name: Restart nginx
       ansible.builtin.service:
-        name: httpd
+        name: nginx
         state: restarted

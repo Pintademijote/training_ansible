@@ -1,6 +1,6 @@
 ---
 - name: Run mario
-  gather_facts: No
+  gather_facts: true
   hosts: prod
 
   tasks:

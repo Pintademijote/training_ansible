@@ -65,6 +65,7 @@
       community.general.easy_install:
         name: pip
         state: latest
+      become: yes
 
     - name: Install Docker Module for Python
       pip:

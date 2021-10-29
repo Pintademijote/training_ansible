@@ -12,6 +12,8 @@
       community.docker.docker_container:
         name: httpd
         image: httpd
+        exposed_ports:
+          - 80
         ports:
           - 80:80
         volumes: /home/vagrant/webapp/:/usr/local/apache2/htdocs/

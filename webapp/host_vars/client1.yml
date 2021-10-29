@@ -1,1 +1,1 @@
-welcome: Hi 
+welcome: Hi {{ ansible_hostname }}

@@ -6,6 +6,11 @@
 
   tasks:
 
+  - name: "Clean Folder"
+    file:
+      path: /home/vagrant/webapp/
+      state: absent
+
   - name: recreate directory 
     file:
       state: directory

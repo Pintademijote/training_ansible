@@ -24,5 +24,5 @@
   - name: Use template for index.html
     template:
       src: "index.html"
-      dest: "/home/vagrant/webapp/"
+      dest: "/home/vagrant/webapp/index.html"
       mode: 0644

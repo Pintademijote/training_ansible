@@ -1,6 +1,6 @@
 ---
 - name: install website
-  hosts: server
+  hosts: prod
   become: true
   become_user: root
 

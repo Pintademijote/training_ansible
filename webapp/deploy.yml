@@ -2,7 +2,6 @@
   hosts: prod
 
 - import_playbook: nginx.yml
-  when: ansible_distribution == "CentOS"
 
 - import_playbook: webapp.yml
   when: ansible_distribution == "CentOS"

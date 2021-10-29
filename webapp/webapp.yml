@@ -36,3 +36,11 @@
       src: "index.html"
       dest: "/usr/share/nginx/html/"
       mode: 0644
+    notify:
+    - Restart httpd
+
+  handlers:
+    - name: Restart httpd
+      ansible.builtin.service:
+        name: httpd
+        state: restarted

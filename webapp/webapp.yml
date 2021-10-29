@@ -5,32 +5,6 @@
   become_user: root
 
   tasks:
-  - name: Touch again the same file, but do not change times this makes the task idempotent
-    ansible.builtin.file:
-      path: /usr/share/nginx/html/index.html
-      state: touch
-
-  - name: Hello World
-    ansible.builtin.lineinfile:
-      path: /usr/share/nginx/html/index.html
-      state: present
-      line: "Hello World"
-
-  - name: empty dest directory 
-    file:
-      state: absent
-      path: /usr/share/nginx/html/
-
-  - name: recreate directory 
-    file:
-      state: directory
-      path: /usr/share/nginx/html/
-
-  - name: Example clone of a single branch
-    ansible.builtin.git:
-      repo: https://github.com/diranetafen/static-website-example.git
-      dest: /usr/share/nginx/html/
-
   - name: Use template for index.html
     template:
       src: "index.html"

@@ -61,10 +61,10 @@
         append: yes
       become: yes
 
-    - name: Install or update pip
-      community.general.easy_install:
-        name: pip
-      become: yes
+    - name: Install pip utils
+      yum:
+        name: python-pip
+        state: latest
 
     - name: Install Docker Module for Python
       pip:

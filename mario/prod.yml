@@ -7,7 +7,6 @@ all:
       vars:
         env: prod
         ansible_password: vagrant
-        ansible_python_interpreter: /usr/bin/python3
       hosts:
         client1:
           ansible_host: 192.168.99.11

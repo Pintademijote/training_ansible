@@ -80,8 +80,9 @@
         name: docker
         executable: pip3
       become: yes
-      
+
     - name: Install git
       ansible.builtin.package:
         name: git
         state: present
+      become: yes

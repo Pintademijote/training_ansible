@@ -60,3 +60,7 @@
         groups: docker
         append: yes
       become: yes
+
+    - name: Install Docker Module for Python
+      pip:
+        name: docker

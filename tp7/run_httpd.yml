@@ -1,0 +1,17 @@
+---
+- name: Run httpd
+  gather_facts: true
+  hosts: prod
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  tags:
+  - httpd
+
+  tasks:
+    - name: Start httpd
+      community.docker.docker_container:
+        name: httpd
+        image: httpd
+        ports:
+          - 80:80
+        volumes: /home/vagrant/webapp/:/usr/local/apache2/htdocs/

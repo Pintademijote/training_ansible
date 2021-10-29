@@ -1,0 +1,23 @@
+---
+- name: install website
+  hosts: server
+  become: true
+  become_user: root
+
+  tasks:
+
+  - name: recreate directory 
+    file:
+      state: directory
+      path: /home/vagrant/webapp/
+
+  - name: Example clone of a single branch
+    ansible.builtin.git:
+      repo: https://github.com/diranetafen/static-website-example.git
+      dest: /home/vagrant/webapp/
+
+  - name: Use template for index.html
+    template:
+      src: "index.html"
+      dest: "/home/vagrant/webapp/"
+      mode: 0644

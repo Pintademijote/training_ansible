@@ -1,0 +1,8 @@
+- gather_facts: yes
+  hosts: server
+
+- import_playbook: install_docker.yml
+- import_playbook: webapp.yml
+- import_playbook: run_httpd.yml
+
+

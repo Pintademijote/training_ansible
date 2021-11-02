@@ -1,0 +1,10 @@
+- hosts: prod
+  remote_user: "{{ system_user }}"
+  roles:
+    - { role: AdnanHodzic.containerized-wordpress }}
+
+  pre_tasks:
+    - name: create www data
+      user: 
+        name: vagrant
+        state: present

@@ -3,6 +3,8 @@
   hosts: prod
   become: true
   become_user: root
+  vars_files:
+    - files/secrets/credentials.yml
 
   tasks:
   - name: Install nginx

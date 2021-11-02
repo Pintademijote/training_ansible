@@ -1,0 +1,10 @@
+- gather_facts: yes
+  hosts: prod
+
+- import_playbook: nginx.yml
+
+- import_playbook: webapp.yml
+  when: ansible_distribution == "CentOS"
+
+#- import_playbook: webapp_debian.yml
+#  when: ansible_distribution == "debian"

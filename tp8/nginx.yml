@@ -1,0 +1,22 @@
+---
+- name: install_dependencies
+  hosts: prod
+  become: true
+  become_user: root
+
+  tasks:
+  - name: Install nginx
+    ansible.builtin.package:
+      name: nginx
+      state: present
+
+  - name: Install git
+    ansible.builtin.package:
+      name: git
+      state: present
+
+  - name: run service
+    ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: yes

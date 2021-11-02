@@ -1,7 +1,7 @@
 - gather_facts: yes
   hosts: prod
   vars_files:
-    - /files/secrets/credentials.yml
+    - files/secrets/credentials.yml
 
 - import_playbook: nginx.yml
 

@@ -1,3 +1,6 @@
+-vars_files:
+  - files/secrets/credentials.yml
+
 - gather_facts: yes
   hosts: prod
 

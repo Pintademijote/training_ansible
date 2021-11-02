@@ -6,7 +6,7 @@ all:
     prod:
       vars:
         env: prod
-        ansible_password: {{ vault_ansible_password }}
+        ansible_password: '{{ vault_ansible_password }}''
       hosts:
         client1:
           ansible_host: 192.168.99.11

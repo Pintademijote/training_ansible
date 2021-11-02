@@ -1,8 +1,7 @@
 - gather_facts: yes
   hosts: prod
-  vars:
-    vars_files:
-      - /vars/external_vars.yml
+  vars_files:
+    - /vars/external_vars.yml
 
 - import_playbook: nginx.yml
 

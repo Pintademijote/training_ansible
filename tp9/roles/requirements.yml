@@ -1,0 +1,3 @@
+collections:
+  - name: https://github.com/organization/repo_name.git
+    type: git

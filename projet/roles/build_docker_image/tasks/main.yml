@@ -15,7 +15,7 @@
     dest: "{{ project_dir }}/index.html"
     owner: "{{ system_user }}"
     group: "{{ system_user }}"
-    mode: 0774
+    mode: 0775
   become: yes
 
 - name: Dockerfile
@@ -24,7 +24,7 @@
     dest: "{{ project_dir }}/Dockerfile"
     owner: "{{ system_user }}"
     group: "{{ system_user }}"
-    mode: 0774
+    mode: 0775
   become: yes
 
 - name: build container image
@@ -33,4 +33,3 @@
     build:
       path: "{{ project_dir }}/Dockerfile"
     source: build
-  become: yes

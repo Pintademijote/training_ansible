@@ -1,5 +1,6 @@
 ---
-- roles:
+- hosts: prod
+  roles:
   - install_docker
   - build_docker_image
   - install_docker

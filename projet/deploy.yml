@@ -1,6 +1,6 @@
   ---
   - hosts: prod
     roles:
-      - { role: install_docker}
-      - { role: build_docker_image}
-      - { role: install_webapp}
+      - install_docker
+      - build_docker_image
+      - install_webapp

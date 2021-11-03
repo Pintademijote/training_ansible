@@ -1,7 +1,7 @@
 ---
 - hosts: prod
   vars_files:
-    - files/secrets/credentials.yml
+    - files/secrets/credentials.yaml
   roles:
   - install_docker
   - build_docker_image

@@ -2,7 +2,7 @@
 
 - name: Start webapp
   community.docker.docker_container:
-    name: mario
+    name: pintade_nginx
     image: pintade/nginx:v1.0
-    ports: "80:80"
+    ports: "81:80"
     publish_all_ports : true

@@ -32,4 +32,4 @@
     name: pintade/nginx:v1.0
     build:
       path: "{{ project_dir }}/Dockerfile"
-    source: build
+    source: local

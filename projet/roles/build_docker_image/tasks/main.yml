@@ -1,7 +1,7 @@
 ---
 - name: Setup compose dir structure
   file:
-    path: "{{ compose_project_dir }}"
+    path: "{{ project_dir }}"
     state: directory
     owner: "{{ system_user }}"
     group: "{{ system_user }}"

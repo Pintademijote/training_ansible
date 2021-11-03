@@ -1,4 +1,4 @@
-  ---
+---
 - roles:
   - install_docker
   - build_docker_image

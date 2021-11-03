@@ -10,6 +10,8 @@
   name: second part
   vars:
     ansible_python_interpreter: /usr/bin/python3
+  vars_files:
+    - files/secrets/credentials.yaml
   roles:
   - build_docker_image
   - install_webapp

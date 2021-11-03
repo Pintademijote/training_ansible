@@ -1,8 +1,14 @@
 ---
 - hosts: prod
+  name: preinstall
   vars_files:
     - files/secrets/credentials.yaml
   roles:
   - install_docker
+
+- name: second part
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  roles:
   - build_docker_image
-  - install_docker
+  - install_webapp

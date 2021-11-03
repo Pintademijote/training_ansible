@@ -1,4 +1,13 @@
 ---
+- name: Setup compose dir structure
+  file:
+    path: "{{ compose_project_dir }}"
+    state: directory
+    owner: "{{ system_user }}"
+    group: "{{ system_user }}"
+    recurse: yes
+    mode: 0755
+
 - name: template html
   template:
     src: index.html

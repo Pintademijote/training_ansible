@@ -1,2 +1,2 @@
 system_user: vagrant
-project_dir: /home/{{ system_user }}/Dockerfile
+project_dir: /home/{{ system_user }}/webapp

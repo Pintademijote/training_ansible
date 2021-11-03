@@ -1,5 +1,5 @@
 ---
-tasks:
+- tasks:
   - name: Install yum utils
     yum:
       name: yum-utils

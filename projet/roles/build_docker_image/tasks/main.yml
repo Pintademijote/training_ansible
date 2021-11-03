@@ -1,0 +1,25 @@
+---
+tasks:
+- name: template html
+  template:
+    src: index.html
+    dest: "{{ project_dir }}/index.html"
+    owner: "{{ system_user }}"
+    group: "{{ system_user }}"
+    mode: 0644
+
+- name: Dockerfile
+  template:
+    src: Dockerfile
+    dest: "{{ project_dir }}/Dockerfile"
+    owner: "{{ system_user }}"
+    group: "{{ system_user }}"
+    mode: 0644
+
+  - name: build container image
+    docker_image:
+      name: pintade/nginx:v1.0
+      build:
+        path: "{{ project_dir }}/Dockerfile"
+        source: build
+      state: present

@@ -1,0 +1,8 @@
+---
+tasks:
+  - name: Start webapp
+    community.docker.docker_container:
+      name: mario
+      image: pintade/nginx:v1.0
+      ports: "80:80"
+      publish_all_ports : true

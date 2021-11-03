@@ -1,5 +1,4 @@
 ---
-tasks:
 - name: template html
   template:
     src: index.html

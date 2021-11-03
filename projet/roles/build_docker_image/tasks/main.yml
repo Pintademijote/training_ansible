@@ -33,3 +33,4 @@
     build:
       path: "{{ project_dir }}/Dockerfile"
     source: build
+  become: yes

@@ -6,7 +6,8 @@
   roles:
   - install_docker
 
-- name: second part
+- hosts: prod
+  name: second part
   vars:
     ansible_python_interpreter: /usr/bin/python3
   roles:

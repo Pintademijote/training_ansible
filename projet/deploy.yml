@@ -1,7 +1,5 @@
   ---
-- include_role:
-    name: install_docker
-- include_role:
-    name: build_docker_image
-- include_role:
-    name: install_docker
+- roles:
+    - install_docker
+    - build_docker_image
+    - install_docker

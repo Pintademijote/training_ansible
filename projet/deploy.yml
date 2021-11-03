@@ -1,8 +1,7 @@
   ---
 - include_role:
-  name: install_docker
+    name: install_docker
 - include_role:
-  name: build_docker_image
+    name: build_docker_image
 - include_role:
-  name: install_docker
-- hosts: install_webapp
+    name: install_docker
